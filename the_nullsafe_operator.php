@@ -3,14 +3,14 @@
 class User {
     public function profile()
     {
-        return new Profile();
+        return null;
     }
 }
 
 class Profile {
     public function employment()
     {
-        return null;
+        return 'employed successfully';
     }
 }
 
@@ -24,5 +24,6 @@ $user = new User;
 
 //echo var_dump($user?->profile()?->employment());
 
-echo $user->profile()?->employment() ?? 'Not provided';
+echo $user->profile()->employment() ?? 'Not provided';
+//echo $user->profile()->employment() ?? 'Not provided';
 
